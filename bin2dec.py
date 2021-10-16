@@ -14,7 +14,7 @@ def bin2dec(*, binary_digits: str) -> int:
 	- Usage Example:
 		some_decimal = bin2dec(binary_digits='0101')
 	"""
-	binary_digits = binary_digits.strip().replace(' ', '')
+	binary_digits = binary_digits.replace(' ', '')
 	VALID_BINARY_DIGITS = ('0', '1')
 
 	if not isinstance(binary_digits, str):
