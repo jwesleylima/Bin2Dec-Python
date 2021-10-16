@@ -21,10 +21,9 @@ def bin2dec(*, binary_digits: str) -> int:
 		raise TypeError('Binary digits must be of type \'str\'')
 	elif len(binary_digits) == 0:
 		raise ValueError('An empty string was entered')
-	elif not str(binary_digits).isnumeric():
-		raise ValueError(f'Unexpected invalid binary digit: "{binary_digits}"')
-	elif not all(d in VALID_BINARY_DIGITS for d in binary_digits):
-		raise ValueError(f'Unknown binary digit format: "{binary_digits}"')
+	elif not str(binary_digits).isnumeric() or not \
+	all(d in VALID_BINARY_DIGITS for d in binary_digits):
+		raise ValueError(f'Only binary digits (0 and 1) are allowed: "{binary_digits}" entered')
 
 	# Convert
 	decimal_number = 0
