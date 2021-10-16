@@ -33,11 +33,11 @@ try:
   bin_digit = str(input('bin: '))
   print(bin2dec(binary_digits=bin_digit))
 except Exception as e:
-  print(f'Error: {e}')
+  print(f'Sorry, something went wrong: {e}')
 ```
 Agora executando este módulo e inserindo `bla bla` na entrada, temos uma saída parecida com:
 ```bash
->>> Error: Only binary digits (0 and 1) are allowed: "blabla" entered
+>>> Sorry, something went wrong: Only binary digits (0 and 1) are allowed: "blabla" entered
 ```
 ## Sucesso
 Você viu que esta função pode ser útil quando queremos converter um conjunto de dígitos binários para a notaçao decimal de numeração. Fique à vontade para brincar com esta função, no entanto pesso que releia a licença.
